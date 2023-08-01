@@ -1,0 +1,55 @@
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.15;
+  color: #333;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+.planner-view-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #fff;
+  border-radius: 10px;
+  width: 60%;
+  margin: auto;
+  padding: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.planner-view-ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  width: 100%;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin: 10px 0;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+}
+
+.planner-view-ul .list-item:first-child {
+  margin-top: 0;
+}
+
+.planner-view-ul .list-item:last-child {
+  margin-bottom: 0;
+}
+
+h1 {
+  margin-bottom: 40px;
+  font-weight: 700;
+}

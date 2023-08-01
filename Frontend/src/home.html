@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/home.css">
+    <title>Home</title>
+</head>
+<body>
+<div class="home-container">
+    <div class="home-row">
+        <h1 id="welcome-message"></h1>
+    </div>
+    <div class="home-row">
+        <a href="/createTask.html" class="home-button create-task-button">Create Task</a>
+        <a href="/failedTasks.html" class="home-button failed-tasks-button">Failed Tasks</a>
+        <a href="/index.html" class="home-button logout-button">Logout</a>
+    </div>
+</div>
+<table id="taskTable" class="table table-borderless table-striped table-earning">
+    <thead>
+    <tr>
+        <th>Task Name</th>
+        <th>Task Description</th>
+        <th>Mark as Succeeded</th>
+        <th>Mark as Failed</th>
+    </tr>
+    </thead>
+    <tbody id="table-body"></tbody>
+</table>
+<div id="failModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="insult"></p> <!-- This is where the insult will go -->
+        <p>Why did you fail this task?</p>
+        <input id="failureReason" type="text" placeholder="Enter your reason here...">
+        <button id="submitFailure">Submit</button>
+    </div>
+</div>
+<div id="succeedModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>You have successfully completed this task!</p>
+        <button id="submitSuccess">OK</button>
+    </div>
+</div>
+<script src="home.js"></script>
+</body>
+</html>

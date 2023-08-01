@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #83a4d4, #b6fbff);
+  box-sizing: border-box;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  padding: 30px;
+  background-color: #fff;
+  margin-bottom: 2rem;
+  max-width: 90%;
+  width: 800px;
+  margin: 2rem auto;
+}
+
+.home-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.create-task-button {
+  background-color: #007BFF; /* Blue */
+}
+
+.failed-tasks-button {
+  background-color: #007BFF; /* Blue */
+}
+
+.logout-button {
+  background-color: #6c757d; /* Grey */
+}
+
+.succeed-button {
+  background-color: #4caf50; /* Green */
+}
+
+.fail-button {
+  background-color: #f44336; /* Red */
+}
+
+.home-button, .succeed-button, .fail-button {
+  display: inline-block;
+  width: 150px;
+  max-width: 250px;
+  padding: 10px;
+  margin: 1rem 0;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.home-button:hover, .succeed-button:hover, .fail-button:hover {
+  opacity: 0.8;
+}
+
+.table {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  border-collapse: collapse;
+}
+
+.table thead {
+  background-color: #83a4d4;
+  color: #fff;
+}
+
+.table thead th {
+  padding: 1.2rem 1rem;
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.table tbody tr {
+  background-color: #fff;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.table tbody td {
+  padding: 1rem;
+  font-size: 1rem;
+  color: #333;
+  justify-content: center;
+  align-items: center;
+}
+
+td {
+  text-align: center;
+}
+
+/* Failure Reason Modal */
+#failModal, #succeedModal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
+}
+
+#failModal .modal-content, #succeedModal .modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  animation-name: slideIn;
+  animation-duration: 0.4s;
+  text-align:center;
+}
+
+#failModal .close, #succeedModal .close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#failModal .close:hover, #failModal .close:focus, #succeedModal .close:hover, #succeedModal .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#failModal input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+#failModal button, #succeedModal button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+#failModal button:hover, #succeedModal button:hover {
+  opacity: 0.8;
+}
+
+/* Insult text style */
+#insult {
+  color: red;
+  font-weight: bold;
+  margin-bottom: 20px;
+}

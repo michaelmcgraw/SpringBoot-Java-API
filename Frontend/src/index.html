@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="css/sign-in.css">
+  <script>
+    function saveUsername() {
+      var username = document.getElementById("usernameField").value;
+      if (username.trim() === '') {
+        alert('Please enter a username.');
+        return;
+      }
+      localStorage.setItem('username', username);
+      document.location = '/home.html';
+    }
+  </script>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div class="sign-in-container">
+  <h1 class="sign-in-text">Accntblty</h1>
+  <input type="text" id="usernameField" placeholder="Username" class="sign-in-input input" />
+  <button onclick="saveUsername()" class="sign-in-button">Sign In</button>
+  <button onclick="window.location.href='https://i.imgur.com/CDkuW7C.png'" class="create-user-button">Create User</button>
+</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/createTask.css">
+    <title>Create Task</title>
+</head>
+<body>
+<div class="create-task-container">
+    <h1 id="heading">Create Task</h1>
+    <input type="text" placeholder="Task Name" class="form-input" id="task-name">
+    <textarea placeholder="Description" class="form-input" id="task-description"></textarea>
+    <button id="submitButton" value="button task-button">Create Task</button>
+    <button id="returnToHomeButton">Cancel</button>
+</div>
+
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Success!</h2>
+        <p>Task Created Successfully!</p>
+        <p>Task Name: <span id="taskName"></span></p>
+        <p>Task Description: <span id="taskDescription"></span></p>
+    </div>
+</div>
+
+<script src="createTask.js"></script>
+</body>
+</html>
